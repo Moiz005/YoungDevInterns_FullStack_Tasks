@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/internee.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="internee-page">
+        <header>
+            <nav>
+                <p><a href="/internee" class="heading">Internee.pk</a></p>
+            </nav>
+        </header>
+        <div class="right">
+            <div class="right-nav">
+                <div class="left-part">
+                    <h2>Pakistan's Virtual Internship Platform</h2>
+                </div>
+                <div class="right-part">
+                    <i class="fa-solid fa-user"></i>
+                    <p class="name"><%= name %></p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="dropdown">
+                        <a href="/logout"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <p>Home</p>
+            </div>
+            <section class="welcome">
+                <p>Welcome from internee.pk ,<%= name %> !</p>
+            </section>
+            <hr>
+            <section class="tasks">
+                <div class="rows">
+                    <div class="row">
+                        <p class="heading">Your Running Task</p>
+                    </div>
+                    <div class="row">
+                        <p class="serial heading">#</p>
+                        <p class="id heading">Task id</p>
+                        <p class="category heading">Category</p>
+                        <p class="task heading">Task</p>
+                        <p class="status heading">Status</p>
+                        <p class="action heading">Actions</p>
+                    </div>
+                    <div class="row">
+                        <p class="serial">1</p>
+                        <p class="id">TSK-000-1</p>
+                        <p class="category">Backend Internship</p>
+                        <p class="task">Create a MultiLogin site</p>
+                        <p class="status"><%= status %></p>
+                        <p class="btn action">Submit</p>
+                    </div>
+                </div>
+                <% if(submitted == false){ %>
+                    <form action="/submit" method="post">
+                        <input type="file" name="file">
+                        <input class="btn" type="submit" value="Submit">
+                    </form>
+                <% }else{ %>
+                        <p class="message">File Submitted</p>
+                <% } %>
+            </section>
+        </div>
+    </div>
+
+    <script src="/js/submission.js"></script>
+</body>
+</html>
