@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/student.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="functionPage">
+        <div class="nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/view_student_profile">View Profile</a></li>
+                <li><a href="/view_student_courses">View Courses</a></li>
+                <li><a href="/add_student_courses">Add Courses</a></li>
+                <li><a href="/remove_student_courses">Remove Courses</a></li>
+            </ul>
+        </div>
+        <div class="glass">
+            <p class="text-heading">Remove Courses</p>
+            <form action="/remove_student_courses" method="post" class="functionColumn">
+                <div class="course">
+                    <input type="checkbox" name="courses" id="course1" value="course1">
+                    <label for="course1">Course1</label>
+                </div>
+                <div class="course">
+                    <input type="checkbox" name="courses" id="course2" value="course2">
+                    <label for="course2">Course2</label>
+                </div>
+                <div class="course">
+                    <input type="checkbox" name="courses" id="course3" value="course3">
+                    <label for="course3">Course3</label>
+                </div>
+                <div class="course">
+                    <input type="checkbox" name="courses" id="course4" value="course4">
+                    <label for="course4">Course4</label>
+                </div>
+                <div class="course">
+                    <input type="checkbox" name="courses" id="course5" value="course5">
+                    <label for="course5">Course5</label>
+                </div>
+                <input type="submit" value="Remove Courses" class="btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

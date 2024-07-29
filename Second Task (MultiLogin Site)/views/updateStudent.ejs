@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Update Student</title>
+</head>
+<body>
+    <div class="updateStudentPage">
+        <div class="glass">
+            <% if(locals.previousUser){ %>
+                <p class="text-heading">Update Student Form</p>
+                <form action="/updatestudent/<%- previousUser %>" method="post" class="updateForm">
+                    <div class="main">
+                        <div class="left">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name"><br>
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
+                            <label for="father">Father's Name</label>
+                            <input type="text" id="father" name="father" placeholder="Father's Name"><br>
+                        </div>
+                        <div class="right">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Username"><br>
+                            <label for="password">Password</label>
+                            <input type="text" id="password" name="password" placeholder="Password">
+                            <label for="previousGrade">Previous Grade</label>
+                            <input type="text" id="previousGrade" name="previousGrade" placeholder="Previous Grade">
+                        </div>
+                    </div>
+                    <input type="submit" value="Update Student" class="btn">
+                </form>
+            <% }else{ %>
+                <form action="/search_updatestudent" method="post" class="updateStudentForm">
+                    <input type="search" name="search" placeholder="Search">
+                    <input type="submit" value="Search Student" class="btn">
+                </form>
+                <% if(locals.students){ %>
+                <div class="searchResults">
+                    <% students.forEach((student, i) => {%>
+                        <form action="/search_updatestudent/<%- student.username %>" method="post" class="student">
+                            <span>Name: <%= student.name %></span>
+                            <span>Father's Name: <%= student.father_name %></span>
+                            <span>Username: <%= student.username %></span>
+                            <span><input type="submit" value="Update" class="btn"></span>
+                        </form>
+                    <% }); %>
+                </div>
+                <% }else if(locals.message){ %>
+                    <div class="message">
+                        <p><%= message %></p>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.functionPage {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.functionPage .nav {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 1.3em;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+}
+
+.functionPage .nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.functionPage .nav ul li {
+    list-style: none;
+}
+
+.functionPage .nav ul li a {
+    color: azure;
+    text-decoration: none;
+    padding: 0.8em;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.functionPage .nav ul li a:hover {
+    box-shadow: 0 8px 32px 0 white;
+}
+
+.functionPage .glass {
+    color: azure;
+    width: 40%;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.functionPage .glass .text-heading {
+    font-size: 1.5rem;
+}
+
+.functionPage .glass .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.functionPage .glass .main .left,
+.functionPage .glass .main .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.functionPage .glass .functionColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.functionPage .glass .btn {
+    width: auto;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #5867dd;
+    box-shadow: 0 8px 32px 0 #5868dd7c;
+    color: white;
+    transition: 0.7s;
+}
+
+.functionPage .glass .btn:hover {
+    background-color: #384ad7;
+    cursor: pointer;
+}

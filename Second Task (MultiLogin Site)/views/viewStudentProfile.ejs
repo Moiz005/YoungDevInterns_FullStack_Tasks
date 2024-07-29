@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/student.css">
+    <title>View Profile</title>
+</head>
+<body>
+    <div class="functionPage">
+        <div class="nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/view_student_profile">View Profile</a></li>
+                <li><a href="/view_student_courses">View Courses</a></li>
+                <li><a href="/add_student_courses">Add Courses</a></li>
+                <li><a href="/remove_student_courses">Remove Courses</a></li>
+            </ul>
+        </div>
+        <div class="glass">
+            <p class="text-heading">View Profile</p>
+            <% if(locals.selectedStudent){ %>
+                <div class="main">
+                    <div class="left">
+                        <p>Name: <%= selectedStudent.name %></p>
+                        <p>Phone Number: <%= selectedStudent.phone %></p>
+                        <p>Father's Name: <%= selectedStudent.father_name %></p>
+                    </div>
+                    <div class="right">
+                        <p>Username: <%= selectedStudent.username %></p>
+                        <p>Previous Grade: <%= selectedStudent.previousgrade %></p>
+                        <p>Type: <%= selectedStudent.type %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

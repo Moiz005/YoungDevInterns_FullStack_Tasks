@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-page">
+        <% if(locals.message){ %>
+                <div class="message"><p>Incorrect Information</p></div>
+            <% } %>
+        <div class="glass">
+            <p class="text-heading">Sign in</p>
+            <form class="loginForm" action="/login" method="post">
+                <div class="roll">
+                    <label for="Username">Username</label>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="pass">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="choice">
+                    <input class="radio" type="radio" name="userType" id="student" value="student" required>
+                    <label for="student">Student</label><br>
+                    <input class="radio" type="radio" name="userType" id="admin" value="admin" required>
+                    <label for="admin">Admin</label><br>
+                </div>
+                <input type="submit" class="btn" value="Login">
+            </form>
+            <p>Don't have an account ? <a class="register" href="/register">Register</a></p>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>

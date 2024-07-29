@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Remove Student</title>
+</head>
+<body>
+    <div class="removeStudentPage">
+        <div class="glass">
+            <form action="/removestudent" method="post" class="removeStudentForm">
+                <input type="search" name="search" placeholder="Search">
+                <input type="submit" value="Search Student" class="btn">
+            </form>
+            <% if(locals.students){ %>
+                <div class="searchResults">
+                    <% students.forEach((student, i) => {%>
+                        <form action="/removestudent/<%- student.username %>" method="post" class="student">
+                            <span>Name: <%= student.name %></span>
+                            <span>Father's Name: <%= student.father_name %></span>
+                            <span>Username: <%= student.username %></span>
+                            <span><input type="submit" value="Delete" class="btn"></span>
+                        </form>
+                    <% }); %>
+                </div>
+            <% }else if(locals.message){ %>
+                <div class="message">
+                    <p><%= message %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

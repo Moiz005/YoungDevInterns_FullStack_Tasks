@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Manage Courses</title>
+</head>
+<body>
+    <div class="functionPage">
+        <div class="glass">
+            <% if(locals.selectedStudent){ %>
+                <p class="text-heading">Manage Courses</p>
+                <form method="post" class="functionColumnForm">
+                    <div class="course">
+                        <input type="checkbox" name="courses" id="course1" value="course1">
+                        <label for="courses">Course1</label>
+                    </div>
+                    <div class="course">
+                        <input type="checkbox" name="courses" id="course2" value="course2">
+                        <label for="courses">Course2</label>
+                    </div>
+                    <div class="course">
+                        <input type="checkbox" name="courses" id="course3" value="course3">
+                        <label for="courses">Course3</label>
+                    </div>
+                    <div class="course">
+                        <input type="checkbox" name="courses" id="course4" value="course4">
+                        <label for="courses">Course4</label>
+                    </div>
+                    <div class="course">
+                        <input type="checkbox" name="courses" id="course5" value="course5">
+                        <label for="courses">Course5</label>
+                    </div>
+                    <div class="course">
+                        <input type="submit" value="Add Courses" class="btn" onclick="submitForm('/search_managecourses/<%- selectedStudent.username %>/add_course')">
+                        <input type="submit" value="Remove Courses" class="btn" onclick="submitForm('/search_managecourses/<%- selectedStudent.username %>/remove_course')">
+                    </div>
+                </form>
+            <% }else{ %>
+                <form action="/search_managecourses" method="post" class="functionForm">
+                    <input type="search" name="search" placeholder="Search">
+                    <input type="submit" value="Search Student" class="btn">
+                </form>
+                <% if(locals.students){ %>
+                <div class="searchResults">
+                    <% students.forEach((student, i) => {%>
+                        <form action="/search_managecourses/<%- student.username %>" method="post" class="student">
+                            <span>Name: <%= student.name %></span>
+                            <span>Father's Name: <%= student.father_name %></span>
+                            <span>Username: <%= student.username %></span>
+                            <span><input type="submit" value="Manage Courses" class="btn"></span>
+                        </form>
+                    <% }); %>
+                </div>
+                <% }else if(locals.message){ %>
+                    <div class="message">
+                        <p><%= message %></p>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+
+    <script>
+        function submitForm(action){
+            let form = document.querySelector('.functionColumnForm');
+            form.action = action;
+            form.submit();
+        }
+    </script>
+</body>
+</html>

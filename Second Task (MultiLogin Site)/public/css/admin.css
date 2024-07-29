@@ -1,0 +1,565 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.admin-body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-body .glass {
+    color: azure;
+    width: 35%;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-body .glass .text-heading {
+    font-size: 1.5rem;
+}
+
+.admin-body .glass .functions {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 20px;
+}
+
+.admin-body .glass .functions .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-body .glass .functions .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-body .glass .functions a {
+    width: 100%;
+}
+
+.admin-body .glass .functions .btn {
+    padding: 7px;
+    color: azure;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.admin-body .glass .functions .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Edit Profile */
+
+.editPage {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editPage .glass {
+    color: azure;
+    width: 35%;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.editPage .glass .text-heading {
+    font-size: 1.5rem;
+}
+
+.editPage .glass .editForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.editPage .glass .editForm .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.editPage .glass .editForm .left {
+    display: flex;
+    flex-direction: column;
+}
+
+.editPage .glass .editForm .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.editPage .glass .editForm input[type=text] {
+    padding: 7px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    color: azure;
+}
+
+.editPage .glass .editForm .btn {
+    width: 70%;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #5867dd;
+    box-shadow: 0 8px 32px 0 #5868dd7c;
+    color: white;
+    transition: 0.7s;
+}
+
+.editPage .glass .editForm .btn:hover {
+    background-color: #384ad7;
+    cursor: pointer;
+}
+
+.addStudentPage {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addStudentPage .glass {
+    color: azure;
+    width: 35%;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.addStudentPage .glass .text-heading {
+    font-size: 1.5rem;
+}
+
+.addStudentPage .glass .addStudentForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.addStudentPage .glass .addStudentForm .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.addStudentPage .glass .addStudentForm .left {
+    display: flex;
+    flex-direction: column;
+}
+
+.addStudentPage .glass .addStudentForm .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.addStudentPage .glass .addStudentForm input[type=text] {
+    padding: 7px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    color: azure;
+}
+
+.addStudentPage .glass .addStudentForm .btn {
+    width: 70%;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #5867dd;
+    box-shadow: 0 8px 32px 0 #5868dd7c;
+    color: white;
+    transition: 0.7s;
+}
+
+.addStudentPage .glass .addStudentForm .btn:hover{
+    background-color: #384ad7;
+    cursor: pointer;
+}
+
+.removeStudentPage {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.removeStudentPage .glass {
+    color: azure;
+    width: 40%;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.removeStudentPage .glass .removeStudentForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.removeStudentPage .glass .removeStudentForm input[type=search] {
+    padding: 0.8em;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    color: azure;
+}
+
+.removeStudentPage .glass .student {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.removeStudentPage .glass .btn {
+    width: auto;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #5867dd;
+    box-shadow: 0 8px 32px 0 #5868dd7c;
+    color: white;
+    transition: 0.7s;
+}
+
+.removeStudentPage .glass .btn:hover{
+    background-color: #384ad7;
+    cursor: pointer;
+}
+
+.removeStudentPage .glass .message {
+    background-color: rgba(233, 7, 7, 0.411);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(233, 7, 7, 0.411);
+}
+
+/* Update Student */
+
+.updateStudentPage {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.updateStudentPage .glass {
+    color: azure;
+    width: 40%;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.updateStudentPage .glass .text-heading {
+    font-size: 1.5rem;
+}
+
+.updateStudentPage .glass .updateStudentForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.updateStudentPage .glass .updateStudentForm input[type=search] {
+    padding: 0.8em;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    color: azure;
+}
+
+.updateStudentPage .glass .student {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.updateStudentPage .glass .btn {
+    width: auto;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #5867dd;
+    box-shadow: 0 8px 32px 0 #5868dd7c;
+    color: white;
+    transition: 0.7s;
+}
+
+.updateStudentPage .glass .btn:hover{
+    background-color: #384ad7;
+    cursor: pointer;
+}
+
+.updateStudentPage .glass .message {
+    background-color: rgba(233, 7, 7, 0.411);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(233, 7, 7, 0.411);
+}
+
+.updateStudentPage .glass .updateForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.updateStudentPage .glass .updateForm .main {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+
+.updateStudentPage .glass .updateForm .main input[type=text] {
+    padding: 0.8em;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    color: azure;
+    border-radius: 10px;
+}
+
+.updateStudentPage .glass .updateForm .main .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.updateStudentPage .glass .updateForm .main .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.updateStudentPage .glass .updateForm .btn {
+    width: auto;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #5867dd;
+    box-shadow: 0 8px 32px 0 #5868dd7c;
+    color: white;
+    transition: 0.7s;
+}
+
+.updateStudentPage .glass .updateForm .btn:hover {
+    background-color: #384ad7;
+    cursor: pointer;
+}
+
+
+/* View Student */
+
+.functionPage {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.functionPage .glass {
+    color: azure;
+    width: 40%;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.functionPage .glass .text-heading {
+    font-size: 1.5rem;
+}
+
+.functionPage .glass .functionForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.functionPage .glass .functionColumnForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.functionPage .glass .functionForm input[type=search] {
+    padding: 0.8em;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    color: azure;
+}
+
+.functionPage .glass .student {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.functionPage .glass .btn {
+    width: auto;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #5867dd;
+    box-shadow: 0 8px 32px 0 #5868dd7c;
+    color: white;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.functionPage .glass .btn:hover{
+    background-color: #384ad7;
+    cursor: pointer;
+}
+
+.functionPage .glass .message {
+    background-color: rgba(233, 7, 7, 0.411);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(233, 7, 7, 0.411);
+}
+
+.functionPage .glass>.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+
+.functionPage .glass>.main>.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+
+.functionPage .glass>.main>.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+
+.functionPage .glass .functionColumnForm .course {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
